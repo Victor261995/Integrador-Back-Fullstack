@@ -1,0 +1,144 @@
+ Ports:
+
+ALBUMS
+
+GET localhost:2600/api/albums/               sin body deberia devolver un json con todos los abumes 
+GET http://localhost:2600/api/albums/id ,         sin body ,desde el id: 33 al 38 deberia devolver el album buscado 
+
+
+
+
+USER
+
+
+
+
+
+POST http://localhost:2600/users/NewUser  crea un usuario
+
+body{
+  "nombre": 
+  "email": 
+  "contrasena": 
+  
+
+}
+
+
+POST http://localhost:2600/users/Login  iniciar sesion
+body{
+   
+  "email": 
+  "contrasena": 
+}                      devuelve key de autentificacion
+
+
+
+
+
+GET http://localhost:2600/users/:userId       informarcion de usuario apartir de id 5
+
+
+DELETE  http://localhost:2600/users/:userId     delete user a partir de id 5
+
+
+ POST  http://localhost:2600/users/logout         Cerrar sesion
+
+
+
+Search/BUSQUEDA
+
+http://localhost:2600/Search  params 'Searchterms' y un valor  busqueda por canciones y artistas
+
+
+
+Playlist 
+
+
+Create playlist:
+POST http://localhost:2600/playList/newPlaylist
+
+body{
+  "nombre": "",
+  "usuarioId": ,
+
+  "songIds": []   405 a 481
+}
+
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+
+eliminar playlist:
+DELETE http://localhost:2600/playList/id
+
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+
+eliminar cancion de playlist :
+
+DELETE http://localhost:2600/playList/:playlistId/deletetrack/:songId
+
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+Obtener todas las play list de un usuario :
+
+GET http://localhost:2600/playList/:Userplaylists
+
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+
+agregar cancion a Playlist:
+
+POST http://localhost:2600/playList/addToPlaylist
+
+{
+  "playlistName": "",
+  "songId": []  405 a 481
+}
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+
+
+No estan muy probadas ya que no llegue a aplicarlas en la aplicacion:
+
+SEGUIR ARTISTA
+
+POST http://localhost:2600/followArtist/nombredeartista 
+ 
+
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+
+Eliminar Artista
+
+Delete http://localhost:2600/unfollowartist/nombredeartista
+
+header :
+authorization:Bearer Value:key de autentificacion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
