@@ -25,7 +25,7 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const userController_1 = require("./Controllers/userController");
 const prisma = new client_1.PrismaClient();
 const app = (0, express_1.default)();
-const PORT = 2600;
+const PORT = process.env.PORT || 2600;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
     credentials: true,

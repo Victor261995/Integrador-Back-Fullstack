@@ -15,7 +15,7 @@ const prisma= new PrismaClient();
 
 const app =express();
 
-const PORT=2600;
+const PORT=process.env.PORT||2600
 
 app.use(express.json());
  
